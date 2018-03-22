@@ -3,7 +3,7 @@
 <head>
 	<title>Homepage</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="view/theme.css">
 </head>
 <body>
     <center>
