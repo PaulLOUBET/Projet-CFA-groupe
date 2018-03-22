@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>Homepage</title>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="theme.css">
 </head>
 <body>
     <center>

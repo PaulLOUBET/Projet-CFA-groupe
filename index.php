@@ -8,7 +8,7 @@ switch ($page) {
 		include "view/inscription.html";
         break;
     case 'home':
-		include "view/home.html";
+		include "view/home.php";
         break;
 	default:
 		include "view/home.html";
