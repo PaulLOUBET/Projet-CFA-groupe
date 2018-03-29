@@ -4,9 +4,9 @@ $login = $_POST['login'];
 $password = $_POST['password'];
 
 if ($login=="abc" && $password=="123"){
-	include "Vue/success.php";
+	include "view/success.php";
 }else {
-	include "Vue/error.php";
+	include "view/error.php";
 }
 
 ?>

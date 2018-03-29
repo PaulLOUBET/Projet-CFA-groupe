@@ -9,9 +9,15 @@ switch ($page) {
         break;
     case 'home':
 		include "view/home.php";
-        break;
+		break;
+	case 'check_login':
+		include "controller/check_login.php";
+		break;
+	case 'login':
+		include "view/login.html";
+		break;
 	default:
-		include "view/home.html";
+		include "view/login.html";
 		break;
 }
 
