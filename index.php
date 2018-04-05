@@ -1,24 +1,54 @@
 <?php
 
 $page = $_GET['page'];
+$action = $_GET["action"];
 
-
-switch ($page) {
-	case 'inscription':
-		include "view/inscription.html";
-        break;
-    case 'home':
-		include "view/home.php";
-		break;
-	case 'check_login':
-		include "controller/check_login.php";
-		break;
-	case 'login':
-		include "view/login.html";
-		break;
-	default:
-		include "view/login.html";
-		break;
+function showPage($page){
+	
+	include_once $page;
+	
 }
+function checkLoggedIn(){
+	
+	
+}
+
+if ($page){
+	switch ($page) {
+		case 'accueil':
+			checkLoggedIn();
+			showPage("Vue/home.php");
+			break;
+		case 'login':
+			showPage("Vue/login.html");
+			break;
+		case "inscription":
+			showPage("view/inscription.html");
+			break;
+		default:
+			checkLoggedIn();
+			showPage("Vue/home.php");
+			break;
+	}
+}else if ($action){
+	switch ($action) {
+		case 'inscription':
+			include_once "controller/inscription.php";
+			break;
+		case 'login':
+			include_once "Controler/login.php";
+			break;
+		case 'logout':
+			include_once "Controler/logout.php";
+			break;
+		default:
+			include "Vue/home.php";
+			break;
+	}
+}else {
+	checkLoggedIn();
+	showPage("view/home.php");
+}
+
 
 ?>
