@@ -27,7 +27,7 @@ if ($page){
 			break;
 		default:
 			checkLoggedIn();
-			showPage("Vue/home.php");
+			showPage("Vue/home.html");
 			break;
 	}
 }else if ($action){
