@@ -29,7 +29,7 @@ class Model
 	}
 
 	function createUser($user){
-		$stmt = $this->connexion->prepare("INSERT INTO `user`( `email`, `sex` VALUES (:email,:sex)");
+		$stmt = $this->connexion->prepare("INSERT INTO `user`( `email`, `sex`) VALUES (:email,:sex)");
 		$stmt->bindParam(':email', $user->getMail());
 		$stmt->bindParam(':sex', $user->getSex());
 		$stmt->execute();
@@ -38,9 +38,9 @@ class Model
 
 		$sql =  "SELECT * FROM `user` WHERE email='".$email."'";
 		$user = null;
-		include_once "Model/user.php";
+		include_once "model/user.php";
 	    foreach  ($this->connexion->query($sql) as $row) {
-	    	$user = new User($row['email'],00/00/00,$row['sex'],0000);
+	    	$user = new User($row['email'],null,null,$row['sex']);
 	  	}
 	  	return $user;
 	}

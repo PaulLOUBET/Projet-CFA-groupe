@@ -12,9 +12,9 @@ class User
 	private $sex;
 	private $password;
 
-	function __construct($email,$password,$birthdate=null,$sex=null,)
+	function __construct($email,$password,$birthdate=null,$sex=null)
 	{
-		$this->name=$name;
+		
 		$this->email=$email;
 		$this->birthdate=$birthdate;
 		$this->sex=$sex;
@@ -23,10 +23,10 @@ class User
 	}
 
 	function getSex(){
-		return $this->$sex;
+		return $this->sex;
 	}
 	function getMail(){
-		return $this->$email;
+		return $this->email;
 	}
 	
 	function setMail($email){
