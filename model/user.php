@@ -12,7 +12,7 @@ class User
 	private $sex;
 	private $password;
 
-	function __construct($email,$birthdate,$sex,$password)
+	function __construct($email,$password,$birthdate=null,$sex=null,)
 	{
 		$this->name=$name;
 		$this->email=$email;

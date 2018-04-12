@@ -9,7 +9,7 @@ include "model/model.php";
 $model = new Model();
 
 
-$createdUser = new User($email,00/00/00,$sex,0000);
+$createdUser = new User($email,null,null,$sex;
 $user = $model->getUserByEmail($createdUser->getMail());
 if ($user==null){
 	$model->createUser($createdUser);
