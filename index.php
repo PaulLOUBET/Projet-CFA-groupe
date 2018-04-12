@@ -42,12 +42,12 @@ if ($page){
 			include_once "Controler/logout.php";
 			break;
 		default:
-			include "Vue/home.php";
+			include "Vue/home.html";
 			break;
 	}
 }else {
 	checkLoggedIn();
-	showPage("view/home.php");
+	showPage("view/home.html");
 }
 
 
