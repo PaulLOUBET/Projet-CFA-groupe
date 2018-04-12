@@ -4,9 +4,9 @@ $page = $_GET['page'];
 $action = $_GET["action"];
 
 function showPage($page){
-	
+	include_once "view/header.html";
 	include_once $page;
-	
+	include_once "view/footer.html";
 }
 function checkLoggedIn(){
 	
@@ -17,17 +17,17 @@ if ($page){
 	switch ($page) {
 		case 'accueil':
 			checkLoggedIn();
-			showPage("Vue/home.html");
+			showPage("view/home.html");
 			break;
 		case 'login':
-			showPage("Vue/login.html");
+			showPage("view/login.html");
 			break;
 		case "inscription":
 			showPage("view/inscription.html");
 			break;
 		default:
 			checkLoggedIn();
-			showPage("Vue/home.html");
+			showPage("view/home.html");
 			break;
 	}
 }else if ($action){
@@ -36,13 +36,13 @@ if ($page){
 			include_once "controller/inscription.php";
 			break;
 		case 'login':
-			include_once "Controler/login.php";
+			include_once "controller/login.php";
 			break;
 		case 'logout':
-			include_once "Controler/logout.php";
+			include_once "controller/logout.php";
 			break;
 		default:
-			include "Vue/home.html";
+			include "view/home.html";
 			break;
 	}
 }else {
