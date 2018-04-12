@@ -17,7 +17,7 @@ if ($page){
 	switch ($page) {
 		case 'accueil':
 			checkLoggedIn();
-			showPage("Vue/home.php");
+			showPage("Vue/home.html");
 			break;
 		case 'login':
 			showPage("Vue/login.html");
