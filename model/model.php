@@ -19,7 +19,6 @@ class Model
 		    // set the PDO error mode to exception
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		    $this->connexion=$conn;
-		    echo "Connected successfully"; 
 	    }
 		catch(PDOException $e)
 	    {
@@ -29,9 +28,10 @@ class Model
 	}
 
 	function createUser($user){
-		$stmt = $this->connexion->prepare("INSERT INTO `user`( `email`, `sex`) VALUES (:email,:sex)");
+		$stmt = $this->connexion->prepare("INSERT INTO `user`( `email`, `password`, `sex`) VALUES (:email,:password,:sex)");
 		$stmt->bindParam(':email', $user->getMail());
 		$stmt->bindParam(':sex', $user->getSex());
+		$stmt->bindParam(':password', $user->getPassword());
 		$stmt->execute();
 	}
 	function getUserByEmail($email){
@@ -40,7 +40,7 @@ class Model
 		$user = null;
 		include_once "model/user.php";
 	    foreach  ($this->connexion->query($sql) as $row) {
-	    	$user = new User($row['email'],null,null,$row['sex']);
+	    	$user = new User($row['email'],$row['password'],null,$row['sex']);
 	  	}
 	  	return $user;
 	}

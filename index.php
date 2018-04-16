@@ -9,7 +9,10 @@ function showPage($page){
 	include_once "view/footer.html";
 }
 function checkLoggedIn(){
-	
+	session_start();
+	if (!$_SESSION["user"]){
+		header("Location: index.php?page=login");
+	}
 	
 }
 

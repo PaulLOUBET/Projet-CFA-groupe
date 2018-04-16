@@ -35,6 +35,12 @@ class User
 	function setSex($sex){
 		$this->sex=$sex;
 	}
+	function getPassword(){
+		return $this->password;
+	}
+	function setPassword($password){
+		return $this->password=$password;
+	}
 
 }
 
