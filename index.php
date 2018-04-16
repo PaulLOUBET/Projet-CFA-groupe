@@ -18,9 +18,12 @@ function checkLoggedIn(){
 
 if ($page){
 	switch ($page) {
+		case 'test':
+			showPage("view/test_css.html");
+			break;
 		case 'accueil':
 			checkLoggedIn();
-			showPage("view/home.html");
+			showPage("view/home_test.php");
 			break;
 		case 'login':
 			showPage("view/login.html");

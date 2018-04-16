@@ -1,37 +1,8 @@
-<html>
-<head>
-	<title>Homepage</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="view/theme.css">
-</head>
-<body>
-    <center>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <h1>Bienvenue sur le Facebook du futur</h1>
-        <?php
+<center>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1>Bienvenue sur le Facebook du futur</h1>
 
-        session_start();
-
-        if (!$_SESSION["user"]){
-            header("Location: index.php?page=login");
-        }
-
-
-        include_once "Model/user.php";
-
-        $user = unserialize($_SESSION["user"]);
-        $name = $user->getName();
-
-        ?>
-
-        <h1>Bienvenue sur l'accueil</h1>
-        <h2>votre nom est : <?php echo $name; ?></h2>
-
-
-
-    </center>
-</body>
-</html>
+</center>
