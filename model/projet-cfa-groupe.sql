@@ -1,33 +1,41 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le :  lun. 16 avr. 2018 à 12:36
--- Version du serveur :  5.6.38
--- Version de PHP :  7.2.1
+-- Host: localhost:3306
+-- Generation Time: May 14, 2018 at 08:08 PM
+-- Server version: 5.6.34-log
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Base de données :  `ProjetCFA`
+-- Database: `projet-cfa-groupe`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Amis`
+-- Table structure for table `amis`
 --
 
-CREATE TABLE `Amis` (
+CREATE TABLE `amis` (
   `amis` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire`
+-- Table structure for table `commentaire`
 --
 
 CREATE TABLE `commentaire` (
@@ -38,25 +46,27 @@ CREATE TABLE `commentaire` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `publication`
+-- Table structure for table `publication`
 --
 
 CREATE TABLE `publication` (
   `id` int(100) NOT NULL,
+  `content` text NOT NULL,
   `date` date NOT NULL,
   `video` varchar(1000) NOT NULL,
   `picture` varchar(1000) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_mail` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
   `id` int(10) NOT NULL,
+  `pseudo` varchar(30) NOT NULL,
   `email` varchar(50) DEFAULT NULL,
   `password` varchar(300) DEFAULT NULL,
   `profile_pic` text,
@@ -66,46 +76,47 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `user`
---
-
-INSERT INTO `user` (`id`, `email`, `password`, `profile_pic`, `sex`, `description`, `birthdate`) VALUES
-(1, 'jean', NULL, NULL, 'gros', NULL, NULL);
-
---
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `commentaire`
+-- Indexes for table `commentaire`
 --
 ALTER TABLE `commentaire`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `publication`
+-- Indexes for table `publication`
 --
 ALTER TABLE `publication`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `commentaire`
+-- AUTO_INCREMENT for table `commentaire`
 --
 ALTER TABLE `commentaire`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT pour la table `publication`
+-- AUTO_INCREMENT for table `publication`
 --
 ALTER TABLE `publication`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -4,7 +4,7 @@ $page = $_GET['page'];
 $action = $_GET["action"];
 
 function showPage($page){
-	include_once "view/header.html";
+	include_once "view/header.php";
 	include_once $page;
 	include_once "view/footer.html";
 }
