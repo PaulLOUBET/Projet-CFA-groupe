@@ -11,8 +11,9 @@
 		session_start();  
 
 		if ($_SESSION["user"]){?>
-			<a href='index.php?action=logout'>Se déconnecter</a> <?php    //ne s'affiche que si l'utilisateur est connecté
+			<a href='index.php?action=logout'>Se déconnecter</a> 
+			<a href="index.php?page=profile">Profil </a> <?php    //ne s'affiche que si l'utilisateur est connecté
 		}
 	?>
-		
+
 

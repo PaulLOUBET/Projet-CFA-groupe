@@ -31,6 +31,10 @@ if ($page){
 		case "inscription":
 			showPage("view/inscription.html");
 			break;
+		case "profile":
+			checkLoggedIn();
+			showPage("view/profile.php");
+			break;
 		default:
 			checkLoggedIn();
 			showPage("view/home.html");

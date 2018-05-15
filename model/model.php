@@ -42,7 +42,7 @@ class Model
 		$user = null;
 		include_once "model/user.php";
 	    foreach  ($this->connexion->query($sql) as $row) {
-	    	$user = new User($row['email'],$row['password'],$row['pseudo'],$row['birthdate'],$row['sex']);
+	    	$user = new User($row['email'],$row['password'],$row['pseudo'],$row['birthdate'],$row['sex'],$row['description']);
 	  	}
 	  	return $user;
 	}
@@ -52,7 +52,7 @@ class Model
 		$user = null;
 		include_once "model/user.php";
 	    foreach  ($this->connexion->query($sql) as $row) {
-	    	$user = new User($row['email'],$row['password'],$row['pseudo'],$row['birthdate'],$row['sex']);
+	    	$user = new User($row['email'],$row['password'],$row['pseudo'],$row['birthdate'],$row['sex'],$row['description']);
 	  	}
 	  	return $user;
 	}

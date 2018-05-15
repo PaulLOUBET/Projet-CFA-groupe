@@ -11,8 +11,9 @@ class User
 	private $birthdate;
 	private $sex;
 	private $password;
+	private $descritption;
 
-	function __construct($email,$password,$pseudo,$birthdate=null,$sex=null)
+	function __construct($email,$password,$pseudo,$birthdate=null,$sex=null,$descritption=null)
 	{
 		
 		$this->email=$email;
@@ -20,6 +21,7 @@ class User
 		$this->sex=$sex;
 		$this->password=$password;
 		$this->pseudo=$pseudo;
+		$this->description=$descritption;
 	}
 
 	function getSex(){
@@ -53,7 +55,12 @@ class User
 	function setPseudo($pseudo){
 		return $this->pseudo=$pseudo;
 	}
-
+	function getDescription(){
+		return $this->description;
+	}
+	function setDescription($descritption){
+		return $this->description=$descritption;
+	}
 
 }
 
