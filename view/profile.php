@@ -16,15 +16,24 @@ $birthdate = $user->getBirthdate();
 $description = $user->getDescription();
 
 ?>
-
-<h1>Profil de <?php echo $pseudo; ?></h1>
-</br>
-<a><?php echo $sex; ?></a>
 </br>
 </br>
-<a>Date de naissance :<?php  echo $birthdate; ?></a>
 </br>
-</br>
-<a>Descrition : <?php  echo $description; ?></a>
-
+<div id="profile">
+	</br>
+	<center>
+		<h1>Profil de <?php echo $pseudo; ?></h1>
+	
+	<div id=texte>
+		</br>
+		<a><?php echo $sex; ?></a>
+		</br>
+		</br>
+		<a>Date de naissance :<?php  echo $birthdate; ?></a>
+		</br>
+		</br>
+		<a>Descrition : <?php  echo $description; ?></a>
+	</div>
+	</center>
+</div>
 

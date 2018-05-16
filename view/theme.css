@@ -19,6 +19,46 @@ b{
     background-color: white;
     border-radius: 15px;
 }
+
+#accueil {
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    vertical-align: middle ;
+    width: 50%;
+    height: 21%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#texte{
+    margin: auto;
+}
+
+#created{
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+#existing{
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+#profile {
+    margin: auto;
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+}
+
 body{
     background: url('ISEPCC.jpg') no-repeat;
     background-size: cover;
@@ -44,18 +84,24 @@ ul li{
     line-height: 40px;
     text-align: center;
     font-size: 30px;
+    border-radius: 15px;
+    margin: 5px;
+    
+
 }
 ul li a {
     text-decoration: none;
     color:orange;
     display:block;
     background-color: blue;
+    border-radius: 15px;
+    font-size: 80%;
 
 }
 ul li a:hover{
     background-color:orange;
-    color: blue
-
+    color: blue;
+    border-radius: 15px;
 
 
 }

@@ -5,7 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="view/theme.css">
 </head>
 <body>
+	<div id="created">
 	<center>
+	<br/>
 	<h1>Bravo votre compte a été créé avec succès !</h1>
 	<p>Pseudo: <?php echo $createdUser->getPseudo() ?></p>
 	<p>Mail: <?php echo $createdUser->getMail() ?></p>
@@ -15,6 +17,9 @@
 	<br/>
 	<br/>
 	<a href='index.php?page=accueil'>Accueil</a>
+	</br>
+	</br>
 	<center/>
+	</div>
 </body>
 </html>
