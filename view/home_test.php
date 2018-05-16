@@ -15,6 +15,9 @@ $pseudo = $user->getPseudo();
 $sex = $user->getSex();
 
 ?>
-
-<h1>Bienvenue sur l'accueil</h1>
-<h2>Bonjour <?php echo $pseudo; ?>, comment allez-vous ?</h2>
+<div>
+	</br>
+	</br>
+	<h1>Bienvenue sur l'accueil</h1>
+	<h2>Bonjour <?php echo $pseudo; ?>, comment allez-vous ?</h2>
+</div>

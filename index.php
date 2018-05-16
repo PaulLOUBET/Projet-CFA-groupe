@@ -37,7 +37,7 @@ if ($page){
 			break;
 		default:
 			checkLoggedIn();
-			showPage("view/home.html");
+			showPage("view/home_test.php");
 			break;
 	}
 }else if ($action){

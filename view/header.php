@@ -5,15 +5,18 @@
 	<link rel="stylesheet" type="text/css" href="view/theme.css">
 </head>
 
-<body>	
-<a href='index.php?page=accueil'>Accueil</a>	
+<body>
+<center>	
+<ul>
+	<li><a href='index.php?page=accueil'>Accueil</a></li>
 	<?php 
 		session_start();  
 
 		if ($_SESSION["user"]){?>
-			<a href='index.php?action=logout'>Se déconnecter</a> 
-			<a href="index.php?page=profile">Profil </a> <?php    //ne s'affiche que si l'utilisateur est connecté
+			<li><a href='index.php?action=logout'>Se déconnecter</a></li>
+			<li><a href="index.php?page=profile">Profil </a></li> <?php    //ne s'affiche que si l'utilisateur est connecté
 		}
 	?>
-
+</ul>
+</center>
 
